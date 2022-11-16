@@ -11,6 +11,7 @@
 }
 
 body {
+  box-sizing: border-box;
   min-height: 100vh;
   padding: 1em 0;
   background: linear-gradient(180deg, var(--notable-section-color) 0%, var(--header-section-color) 100%);
