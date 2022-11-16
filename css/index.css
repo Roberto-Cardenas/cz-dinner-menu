@@ -1,0 +1,172 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --primary-text-color: #3F3F3F;
+  --menu-section-color: #754379;
+  --header-section-color: #983E78;
+  --notable-section-color: #343662;
+}
+
+body {
+  min-height: 100vh;
+  padding: 1em 0;
+  background: linear-gradient(180deg, var(--notable-section-color) 0%, var(--header-section-color) 100%);
+  font-family: "Roboto Condensed", sans-serif;
+  color: var(--primary-text-color);
+}
+
+.menu-wrapper {
+  margin: 0 auto;
+  padding: min(2vw, 1em) min(4vw, 2em);
+  max-width: 960px;
+  width: 80%;
+  box-sizing: border-box;
+  background-color: white;
+  border: min(0.5vw, 0.5em) solid;
+  border-image-source: linear-gradient(180deg, var(--header-section-color) 0%, var(--notable-section-color) 100%);
+  border-image-slice: 1;
+}
+.menu-wrapper .impact {
+  font-family: "Faster One", cursive;
+}
+.menu-wrapper section.header {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  justify-content: space-between;
+  margin-bottom: min(1.5vw, 1.5rem);
+  color: var(--header-section-color);
+}
+.menu-wrapper section.header .title {
+  font-size: min(4vw, 3rem);
+}
+.menu-wrapper section.header .dates {
+  font-size: min(1.875vw, 1.125rem);
+  font-weight: 700;
+}
+.menu-wrapper section.menu {
+  margin-bottom: 1.5rem;
+}
+.menu-wrapper section.menu .title {
+  font-size: min(3vw, 2.625rem);
+  margin-bottom: min(0.5rem, 1vw);
+}
+.menu-wrapper section.menu .menu-color {
+  color: var(--menu-section-color);
+}
+.menu-wrapper section.menu .weekly-menu {
+  -moz-columns: 2;
+       columns: 2;
+  -moz-column-fill: auto;
+       column-fill: auto;
+  height: clamp(8em, 34vw, 24em);
+  -moz-column-gap: min(4rem, 4vw);
+       column-gap: min(4rem, 4vw);
+}
+.menu-wrapper section.menu .weekly-menu .day-panel {
+  -moz-column-break-inside: avoid;
+       break-inside: avoid;
+  margin-bottom: min(2vw, 2em);
+}
+.menu-wrapper section.menu .weekly-menu .day-panel .header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+.menu-wrapper section.menu .weekly-menu .day-panel .header h5 {
+  font-size: clamp(0.5rem, 1.5vw, 1.25rem);
+}
+.menu-wrapper section.menu .weekly-menu .day-panel .header p {
+  font-size: min(1.5vw, 1rem);
+}
+.menu-wrapper section.menu .weekly-menu .day-panel ul.col-2 {
+  -moz-columns: 2;
+       columns: 2;
+  -moz-column-fill: balance;
+       column-fill: balance;
+}
+.menu-wrapper section.menu .weekly-menu .day-panel ul li {
+  margin-left: 1.5em;
+  font-size: clamp(0.2rem, 1.5vw, 1rem);
+}
+.menu-wrapper section.notable {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  -moz-column-gap: min(1rem, 1vw);
+       column-gap: min(1rem, 1vw);
+}
+.menu-wrapper section.notable .notable-color {
+  color: var(--notable-section-color);
+}
+.menu-wrapper section.notable .title {
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+.menu-wrapper section.notable .title svg {
+  width: 90%;
+  height: auto;
+}
+.menu-wrapper section.notable .title svg path {
+  fill: var(--notable-section-color);
+}
+.menu-wrapper section.notable .food {
+  grid-column-start: 3;
+  grid-column-end: 8;
+  -moz-columns: 2;
+       columns: 2;
+}
+.menu-wrapper section.notable .food .category {
+  -moz-column-break-inside: avoid;
+       break-inside: avoid;
+  margin-bottom: 1em;
+}
+.menu-wrapper section.notable .food .category h4 {
+  font-size: min(1.5rem, 2vw);
+  margin-bottom: 0.25em;
+}
+.menu-wrapper section.notable .food .category ul li {
+  font-size: min(1rem, 1.5vw);
+  margin-left: 1.5em;
+}
+.menu-wrapper section.notable .announcements {
+  grid-column-start: 8;
+  grid-column-end: 13;
+}
+.menu-wrapper section.notable .announcements .title {
+  padding: min(1.5em, 2vw) min(1em, 2vw);
+  color: white;
+  position: relative;
+}
+.menu-wrapper section.notable .announcements .title .background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: calc(100% + min(4vw, 2em) + min(0.5vw, 0.5em));
+  height: 100%;
+  background-color: var(--notable-section-color);
+}
+.menu-wrapper section.notable .announcements .title p {
+  position: relative;
+  z-index: 1;
+  font-size: min(2rem, 2.625vw);
+}
+.menu-wrapper section.notable .announcements .content {
+  padding: min(1em, 2vw) min(2em, 4vw);
+  font-weight: 600;
+}
+.menu-wrapper section.notable .announcements .content li {
+  margin-left: 1;
+  margin-bottom: 0.5em;
+  font-size: min(1rem, 1.25vw);
+}
+.menu-wrapper section.notable .announcements .content li:last-child {
+  margin-bottom: 0;
+}
+.menu-wrapper section.footer {
+  text-align: right;
+  font-size: min(1rem, 1.25vw);
+}/*# sourceMappingURL=index.css.map */

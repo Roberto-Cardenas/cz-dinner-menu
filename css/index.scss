@@ -1,0 +1,204 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --primary-text-color: #3F3F3F;
+  --menu-section-color: #754379;
+  --header-section-color: #983E78;
+  --notable-section-color: #343662;
+}
+
+body {
+  min-height: 100vh;
+  padding: 1em 0;
+  background: linear-gradient(180deg, var(--notable-section-color) 0%, var(--header-section-color) 100%);
+
+  font-family: 'Roboto Condensed', sans-serif;
+  color: var(--primary-text-color);
+}
+
+.menu-wrapper {
+  margin: 0 auto;
+  padding: Min(2vw, 1em) Min(4vw, 2em);
+  max-width: 960px;
+  width: 80%;
+  box-sizing: border-box;
+
+  background-color: white;
+  border: Min(0.5vw, 0.5em) solid;
+  border-image-source: linear-gradient(180deg, var(--header-section-color) 0%, var(--notable-section-color) 100%);
+  border-image-slice: 1;
+
+  .impact {
+    font-family: 'Faster One', cursive;
+  }
+
+  section.header {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: space-between;
+    margin-bottom: Min(1.5vw, 1.5rem);
+
+    color: var(--header-section-color);
+
+    .title {
+      font-size: Min(4vw, 3rem);
+    }
+
+    .dates {
+      font-size: Min(1.875vw, 1.125rem);
+      font-weight: 700;
+    }
+  }
+
+  section.menu {
+    margin-bottom: 1.5rem;
+
+    .title {
+      font-size: Min(3vw, 2.625rem);
+      margin-bottom: Min(0.5rem, 1vw);
+    }
+
+    .menu-color {
+      color: var(--menu-section-color);
+    }
+
+    .weekly-menu {
+      columns: 2;
+      column-fill: auto;
+      height: clamp(8em, 34vw, 24em);
+      column-gap: Min(4rem, 4vw);
+
+      .day-panel {
+        break-inside: avoid;
+        margin-bottom: Min(2vw, 2em);
+
+        .header {
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          align-items: flex-end;
+
+          h5 {
+            font-size: clamp(0.5rem, 1.5vw, 1.25rem);
+          }
+
+          p {
+            font-size: Min(1.5vw, 1rem);
+          }
+        }
+
+        ul {
+          
+          &.col-2 {
+            columns: 2;
+            column-fill: balance;
+          }
+         
+
+          li {
+            margin-left: 1.5em;
+            font-size: clamp(0.2rem, 1.5vw, 1rem);
+          }
+        }
+      }
+    }
+  }
+
+  section.notable {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    column-gap: Min(1rem, 1vw);
+
+    .notable-color {
+      color: var(--notable-section-color);
+    }
+
+    .title {
+      grid-column-start: 1;
+      grid-column-end: 3;
+
+      svg {
+        width: 90%;
+        height: auto;
+        path {
+          fill: var(--notable-section-color);
+        }
+      }
+    }
+
+    .food {
+      grid-column-start: 3;
+      grid-column-end: 8;
+
+      columns: 2;
+
+      .category {
+        break-inside: avoid;
+        margin-bottom: 1em;
+
+        h4 {
+          font-size: Min(1.5rem, 2vw);
+          margin-bottom: 0.25em;
+        }
+
+        ul li {
+          font-size: Min(1rem, 1.5vw);
+          margin-left: 1.5em;
+        }
+      }
+    }
+
+    .announcements {
+      grid-column-start: 8;
+      grid-column-end: 13;
+
+      .title {
+        padding: Min(1.5em, 2vw) Min(1em, 2vw);
+        color: white;
+
+        position: relative;
+
+        .background {
+          position: absolute;
+          top: 0;
+          left: 0;
+
+          width: calc(100% + Min(4vw, 2em) + Min(0.5vw, 0.5em));
+          height: 100%;
+          background-color: var(--notable-section-color);
+        }
+
+        p {
+          position: relative;
+          z-index: 1;
+          font-size: Min(2rem, 2.625vw);
+        }
+      }
+
+      .content {
+        padding: Min(1em, 2vw) Min(2em, 4vw);
+        font-weight: 600;
+
+        li {
+          margin-left: Min(1,5em, 2vw);
+          margin-bottom: 0.5em;
+
+          font-size: Min(1rem, 1.25vw);
+
+          &:last-child {
+            margin-bottom: 0;
+          }
+        }
+      }
+    }
+  }
+
+  section.footer {
+    text-align: right;
+    font-size: Min(1rem, 1.25vw);
+  }
+}
