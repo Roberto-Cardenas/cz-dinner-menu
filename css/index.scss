@@ -23,7 +23,7 @@ body {
   margin: 0 auto;
   padding: Min(2vw, 1em) Min(4vw, 2em);
   max-width: 960px;
-  width: 80%;
+  width: 85%;
   box-sizing: border-box;
 
   background-color: white;
@@ -67,13 +67,11 @@ body {
     }
 
     .weekly-menu {
-      columns: 2;
-      column-fill: auto;
-      height: clamp(8em, 34vw, 24em);
+      display: grid;
+      grid-template-columns: 1fr 1fr;
       column-gap: Min(4rem, 4vw);
 
       .day-panel {
-        break-inside: avoid;
         margin-bottom: Min(2vw, 2em);
 
         .header {
@@ -92,7 +90,8 @@ body {
         }
 
         ul {
-          
+          margin-left: Min(4vw, 1.5em);
+
           &.col-2 {
             columns: 2;
             column-fill: balance;
@@ -100,7 +99,6 @@ body {
          
 
           li {
-            margin-left: 1.5em;
             font-size: clamp(0.2rem, 1.5vw, 1rem);
           }
         }
@@ -111,7 +109,7 @@ body {
   section.notable {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
-    column-gap: Min(1rem, 1vw);
+    column-gap: Min(1rem, 2vw);
 
     .notable-color {
       color: var(--notable-section-color);
@@ -134,10 +132,10 @@ body {
       grid-column-start: 3;
       grid-column-end: 8;
 
-      columns: 2;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
 
       .category {
-        break-inside: avoid;
         margin-bottom: 1em;
 
         h4 {
@@ -145,9 +143,12 @@ body {
           margin-bottom: 0.25em;
         }
 
-        ul li {
-          font-size: Min(1rem, 1.5vw);
-          margin-left: 1.5em;
+        ul {
+          margin-left: Min(4vw, 1.5em);
+
+          li {
+            font-size: Min(1rem, 1.25vw);
+          }
         }
       }
     }

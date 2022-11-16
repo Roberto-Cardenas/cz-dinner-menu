@@ -22,7 +22,7 @@ body {
   margin: 0 auto;
   padding: min(2vw, 1em) min(4vw, 2em);
   max-width: 960px;
-  width: 80%;
+  width: 85%;
   box-sizing: border-box;
   background-color: white;
   border: min(0.5vw, 0.5em) solid;
@@ -58,17 +58,12 @@ body {
   color: var(--menu-section-color);
 }
 .menu-wrapper section.menu .weekly-menu {
-  -moz-columns: 2;
-       columns: 2;
-  -moz-column-fill: auto;
-       column-fill: auto;
-  height: clamp(8em, 34vw, 24em);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   -moz-column-gap: min(4rem, 4vw);
        column-gap: min(4rem, 4vw);
 }
 .menu-wrapper section.menu .weekly-menu .day-panel {
-  -moz-column-break-inside: avoid;
-       break-inside: avoid;
   margin-bottom: min(2vw, 2em);
 }
 .menu-wrapper section.menu .weekly-menu .day-panel .header {
@@ -83,6 +78,9 @@ body {
 .menu-wrapper section.menu .weekly-menu .day-panel .header p {
   font-size: min(1.5vw, 1rem);
 }
+.menu-wrapper section.menu .weekly-menu .day-panel ul {
+  margin-left: min(4vw, 1.5em);
+}
 .menu-wrapper section.menu .weekly-menu .day-panel ul.col-2 {
   -moz-columns: 2;
        columns: 2;
@@ -90,14 +88,13 @@ body {
        column-fill: balance;
 }
 .menu-wrapper section.menu .weekly-menu .day-panel ul li {
-  margin-left: 1.5em;
   font-size: clamp(0.2rem, 1.5vw, 1rem);
 }
 .menu-wrapper section.notable {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
-  -moz-column-gap: min(1rem, 1vw);
-       column-gap: min(1rem, 1vw);
+  -moz-column-gap: min(1rem, 2vw);
+       column-gap: min(1rem, 2vw);
 }
 .menu-wrapper section.notable .notable-color {
   color: var(--notable-section-color);
@@ -116,21 +113,21 @@ body {
 .menu-wrapper section.notable .food {
   grid-column-start: 3;
   grid-column-end: 8;
-  -moz-columns: 2;
-       columns: 2;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
 }
 .menu-wrapper section.notable .food .category {
-  -moz-column-break-inside: avoid;
-       break-inside: avoid;
   margin-bottom: 1em;
 }
 .menu-wrapper section.notable .food .category h4 {
   font-size: min(1.5rem, 2vw);
   margin-bottom: 0.25em;
 }
+.menu-wrapper section.notable .food .category ul {
+  margin-left: min(4vw, 1.5em);
+}
 .menu-wrapper section.notable .food .category ul li {
-  font-size: min(1rem, 1.5vw);
-  margin-left: 1.5em;
+  font-size: min(1rem, 1.25vw);
 }
 .menu-wrapper section.notable .announcements {
   grid-column-start: 8;
