@@ -111,7 +111,7 @@ section.menu .weekly-menu .day-panel .header h5 {
   font-size: clamp(0.5rem, 2.25vw, 1.25rem);
 }
 section.menu .weekly-menu .day-panel .header p {
-  font-size: min(2vw, 1rem);
+  font-size: min(1.75vw, 1rem);
 }
 section.menu .weekly-menu .day-panel ul {
   margin-left: min(3vw, 1.5em);
@@ -160,7 +160,7 @@ section.notable .title {
   grid-column-end: 3;
 }
 section.notable .title svg {
-  width: 90%;
+  width: 100%;
   height: auto;
 }
 section.notable .title svg path {
@@ -253,7 +253,7 @@ section.notable .announcements .content li:last-child {
 }
 section.footer {
   text-align: right;
-  font-size: min(1rem, 1.5vw);
+  font-size: min(1rem, 1.75vw);
 }
 section.footer .food-links {
   --gap: 1vw;

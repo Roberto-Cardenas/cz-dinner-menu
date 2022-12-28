@@ -127,7 +127,7 @@ section.menu {
         }
 
         p {
-          font-size: Min(2vw, 1rem);
+          font-size: Min(1.75vw, 1rem);
         }
       }
 
@@ -195,7 +195,7 @@ section.notable {
     grid-column-end: 3;
 
     svg {
-      width: 90%;
+      width: 100%;
       height: auto;
       path {
         fill: var(--notable-section-color);
@@ -320,7 +320,7 @@ section.notable {
 
 section.footer {
   text-align: right;
-  font-size: Min(1rem, 1.5vw);
+  font-size: Min(1rem, 1.75vw);
 
   .food-links {
     --gap: 1vw;
