@@ -20,6 +20,8 @@ body {
   background: linear-gradient(125deg, var(--bg-gradient-top) 0%, var(--bg-gradient-bottom) 100%);
   font-family: "Roboto Condensed", sans-serif;
   color: var(--primary-text-color);
+  display: grid;
+  align-items: center;
 }
 
 a {
@@ -34,19 +36,29 @@ a {
 
 .menu-wrapper {
   margin: 0 auto;
-  padding: min(2vw, 1em) min(4vw, 2em);
-  max-width: 960px;
-  width: 80%;
+  padding: 2vw 4vw;
+  max-width: 60em;
+  width: 95%;
   box-sizing: border-box;
   background-color: white;
-  border: min(0.5vw, 0.5em) solid;
+  border: 0.75vw solid;
   border-image-source: linear-gradient(125deg, var(--bg-gradient-bottom) 0%, var(--bg-gradient-top) 100%);
   border-image-slice: 1;
 }
-.menu-wrapper .impact {
+
+@media (min-width: 62em) {
+  .menu-wrapper {
+    padding: 1em 2em;
+    border: 0.5em solid;
+    border-image-source: linear-gradient(125deg, var(--bg-gradient-bottom) 0%, var(--bg-gradient-top) 100%);
+    border-image-slice: 1;
+  }
+}
+.impact {
   font-family: "Faster One", cursive;
 }
-.menu-wrapper section.header {
+
+section.header {
   display: flex;
   flex-direction: row;
   align-items: flex-end;
@@ -54,139 +66,214 @@ a {
   margin-bottom: 1.5rem;
   color: var(--header-section-color);
 }
-.menu-wrapper section.header .title {
-  font-size: min(4vw, 3rem);
+section.header .title {
+  font-size: min(5vw, 3rem);
 }
-.menu-wrapper section.header .dates {
-  font-size: min(1.875vw, 1.125rem);
+section.header .dates {
+  font-size: min(2.125vw, 1.125rem);
   font-weight: 700;
 }
-.menu-wrapper section.menu {
+
+@media (min-width: 62em) {
+  section.header .title {
+    font-size: 3rem;
+  }
+  section.header .dates {
+    font-size: 1.125rem;
+  }
+}
+section.menu {
   margin-bottom: 1.5rem;
 }
-.menu-wrapper section.menu .title {
-  font-size: min(3vw, 2.625rem);
-  margin-bottom: min(0.5rem, 1vw);
+section.menu .title {
+  font-size: min(4vw, 2.625rem);
+  margin-bottom: 0.5rem;
 }
-.menu-wrapper section.menu .menu-color {
+section.menu .menu-color {
   color: var(--menu-section-color);
 }
-.menu-wrapper section.menu .weekly-menu {
+section.menu .weekly-menu {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  -moz-column-gap: min(4rem, 4vw);
-       column-gap: min(4rem, 4vw);
+  -moz-column-gap: 4vw;
+       column-gap: 4vw;
 }
-.menu-wrapper section.menu .weekly-menu .day-panel {
+section.menu .weekly-menu .day-panel {
   margin-bottom: min(2vw, 2em);
 }
-.menu-wrapper section.menu .weekly-menu .day-panel .header {
+section.menu .weekly-menu .day-panel .header {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: flex-end;
 }
-.menu-wrapper section.menu .weekly-menu .day-panel .header h5 {
-  font-size: clamp(0.5rem, 1.5vw, 1.25rem);
+section.menu .weekly-menu .day-panel .header h5 {
+  font-size: clamp(0.5rem, 2.25vw, 1.25rem);
 }
-.menu-wrapper section.menu .weekly-menu .day-panel .header p {
-  font-size: min(1.5vw, 1rem);
+section.menu .weekly-menu .day-panel .header p {
+  font-size: min(2vw, 1rem);
 }
-.menu-wrapper section.menu .weekly-menu .day-panel ul {
-  margin-left: min(4vw, 1.5em);
+section.menu .weekly-menu .day-panel ul {
+  margin-left: min(3vw, 1.5em);
 }
-.menu-wrapper section.menu .weekly-menu .day-panel ul.col-2 {
+section.menu .weekly-menu .day-panel ul.col-2 {
   -moz-columns: 2;
        columns: 2;
   -moz-column-fill: balance;
        column-fill: balance;
 }
-.menu-wrapper section.menu .weekly-menu .day-panel ul li {
-  font-size: clamp(0.2rem, 1.5vw, 1rem);
+section.menu .weekly-menu .day-panel ul li {
+  font-size: clamp(0.2rem, 1.75vw, 1rem);
 }
-.menu-wrapper section.notable {
+
+@media (min-width: 62em) {
+  section.menu .title {
+    font-size: 2.625rem;
+  }
+  section.menu .weekly-menu .day-panel {
+    margin-bottom: 2em;
+  }
+  section.menu .weekly-menu .day-panel .header h5 {
+    font-size: 1.25rem;
+  }
+  section.menu .weekly-menu .day-panel .header p {
+    font-size: 1rem;
+  }
+  section.menu .weekly-menu .day-panel ul {
+    margin-left: 1.5em;
+  }
+  section.menu .weekly-menu .day-panel ul li {
+    font-size: 1em;
+  }
+}
+section.notable {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   -moz-column-gap: min(1rem, 2vw);
        column-gap: min(1rem, 2vw);
 }
-.menu-wrapper section.notable .notable-color {
+section.notable .notable-color {
   color: var(--notable-section-color);
 }
-.menu-wrapper section.notable .title {
+section.notable .title {
   grid-column-start: 1;
   grid-column-end: 3;
 }
-.menu-wrapper section.notable .title svg {
+section.notable .title svg {
   width: 90%;
   height: auto;
 }
-.menu-wrapper section.notable .title svg path {
+section.notable .title svg path {
   fill: var(--notable-section-color);
 }
-.menu-wrapper section.notable .food {
+section.notable .food {
   grid-column-start: 3;
   grid-column-end: 8;
   display: grid;
   grid-template-columns: 1fr 1fr;
 }
-.menu-wrapper section.notable .food .category {
+section.notable .food .category {
   margin-bottom: 1em;
 }
-.menu-wrapper section.notable .food .category h4 {
-  font-size: min(1.5rem, 2vw);
+section.notable .food .category h4 {
+  font-size: min(1.5rem, 2.75vw);
   margin-bottom: 0.25em;
 }
-.menu-wrapper section.notable .food .category ul {
-  margin-left: min(4vw, 1.5em);
+section.notable .food .category ul {
+  margin-left: min(2.5vw, 1.5em);
 }
-.menu-wrapper section.notable .food .category ul li {
-  font-size: min(1rem, 1.25vw);
+section.notable .food .category ul li {
+  font-size: min(1rem, 1.75vw);
 }
-.menu-wrapper section.notable .announcements {
+section.notable .announcements {
   grid-column-start: 8;
   grid-column-end: 13;
 }
-.menu-wrapper section.notable .announcements .title {
-  padding: min(1.5em, 2vw) min(1em, 2vw);
+section.notable .announcements .title {
+  padding: min(1.5em, 3vw) min(1em, 2vw);
   color: white;
   position: relative;
 }
-.menu-wrapper section.notable .announcements .title .background {
+section.notable .announcements .title .background {
   position: absolute;
   top: 0;
   left: 0;
-  width: calc(100% + min(4vw, 2em) + min(0.5vw, 0.5em));
+  width: calc(100% + min(4vw, 2em) + min(0.65vw, 0.5em));
   height: 100%;
   background-color: var(--notable-section-color);
 }
-.menu-wrapper section.notable .announcements .title p {
+section.notable .announcements .title p {
   position: relative;
   z-index: 1;
-  font-size: min(2rem, 2.625vw);
+  font-size: min(2rem, 3vw);
 }
-.menu-wrapper section.notable .announcements .content {
-  padding: min(1em, 2vw) min(2em, 4vw);
+section.notable .announcements .content {
+  padding: min(1em, 2vw) min(2em, 1vw);
   font-weight: 600;
 }
-.menu-wrapper section.notable .announcements .content li {
-  margin-left: 1;
+section.notable .announcements .content li {
+  margin-left: 1.5vw;
   margin-bottom: 0.5em;
-  font-size: min(1rem, 1.25vw);
+  font-size: min(1rem, 1.75vw);
 }
-.menu-wrapper section.notable .announcements .content li:last-child {
+section.notable .announcements .content li:last-child {
   margin-bottom: 0;
 }
-.menu-wrapper section.footer {
+
+@media (min-width: 62em) {
+  section.notable {
+    -moz-column-gap: 1rem;
+         column-gap: 1rem;
+  }
+  section.notable .food .category h4 {
+    font-size: 1.5rem;
+  }
+  section.notable .food .category ul {
+    margin-left: 1.5em;
+  }
+  section.notable .food .category ul li {
+    font-size: 1rem;
+  }
+  section.notable .announcements .title {
+    padding: 1.5em 1em;
+  }
+  section.notable .announcements .title .background {
+    width: calc(100% + 2.5em);
+  }
+  section.notable .announcements .title p {
+    font-size: 2rem;
+  }
+  section.notable .announcements .content {
+    padding: 1em 2em;
+  }
+  section.notable .announcements .content li {
+    margin-left: 1.5em;
+    font-size: 1rem;
+  }
+}
+section.footer {
   text-align: right;
-  font-size: min(1rem, 1.25vw);
+  font-size: min(1rem, 1.5vw);
 }
-.menu-wrapper section.footer .food-links {
-  --gap: 0.5rem;
+section.footer .food-links {
+  --gap: 1vw;
   justify-content: flex-end;
-  margin-top: 0.75rem;
+  margin-top: 1.75vw;
 }
-.menu-wrapper section.footer .food-links a::before {
+section.footer .food-links a::before {
   content: "|";
-  margin-right: 0.5rem;
+  margin-right: 1vw;
+}
+
+@media (min-width: 62em) {
+  section.footer {
+    text-align: 1rem;
+  }
+  section.footer .food-links {
+    --gap: 0.5rem;
+    margin-top: 0.75rem;
+  }
+  section.footer .food-links a::before {
+    margin-right: 0.5rem;
+  }
 }/*# sourceMappingURL=index.css.map */
