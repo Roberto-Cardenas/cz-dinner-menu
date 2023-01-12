@@ -167,6 +167,7 @@ section.notable .food {
   grid-column-end: 8;
   display: grid;
   grid-template-columns: 1fr 1fr;
+  gap: 0.5rem;
 }
 section.notable .food .category {
   margin-bottom: 1em;
@@ -177,6 +178,9 @@ section.notable .food .category h4 {
 }
 section.notable .food .category ul {
   margin-left: min(2.5vw, 1.5em);
+}
+section.notable .food .category ul > * + * {
+  margin-top: 0.25rem;
 }
 section.notable .food .category ul li {
   font-size: min(1rem, 1.75vw);

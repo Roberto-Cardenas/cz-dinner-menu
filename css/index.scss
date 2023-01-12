@@ -207,6 +207,7 @@ section.notable {
 
     display: grid;
     grid-template-columns: 1fr 1fr;
+    gap: 0.5rem;
 
     .category {
       margin-bottom: 1em;
@@ -218,6 +219,10 @@ section.notable {
 
       ul {
         margin-left: Min(2.5vw, 1.5em);
+
+        & > * + * {
+          margin-top: 0.25rem;
+        }
 
         li {
           font-size: Min(1rem, 1.75vw);
