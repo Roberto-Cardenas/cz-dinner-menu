@@ -131,15 +131,12 @@ section.menu {
         }
       }
 
-      ul {
-        margin-left: Min(3vw, 1.5em);
-
-
+      ul {      
         &.col-2 {
-          columns: 2;
-          column-fill: balance;
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          gap: 1rem;
         }
-       
 
         li {
           font-size: clamp(0.2rem, 1.75vw, 1rem);
@@ -174,6 +171,7 @@ section.menu {
 
           li {
             font-size: 1em;
+
           }
         }
       }

@@ -113,14 +113,10 @@ section.menu .weekly-menu .day-panel .header h5 {
 section.menu .weekly-menu .day-panel .header p {
   font-size: min(1.75vw, 1rem);
 }
-section.menu .weekly-menu .day-panel ul {
-  margin-left: min(3vw, 1.5em);
-}
 section.menu .weekly-menu .day-panel ul.col-2 {
-  -moz-columns: 2;
-       columns: 2;
-  -moz-column-fill: balance;
-       column-fill: balance;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
 }
 section.menu .weekly-menu .day-panel ul li {
   font-size: clamp(0.2rem, 1.75vw, 1rem);
