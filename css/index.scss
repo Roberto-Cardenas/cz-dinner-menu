@@ -4,14 +4,16 @@
 }
 
 :root {
-  --primary-text-color: #3F3F3F;
-  --menu-section-color: rgb(101, 78, 163);
-  --header-section-color: rgb(101, 78, 163);
-  --notable-section-color: rgb(101, 78, 163);
+  --primary-text-color: #505050;
+  --menu-section-color: rgb(125, 59, 99);
+  --header-section-color: rgb(125, 59, 99);
+  --notable-section-color: rgb(125, 59, 99);
 
   /* Background gradient colors */
-  --bg-gradient-top: rgb(101, 78, 163);
-  --bg-gradient-bottom: rgb(234, 175, 200);
+  --bg-gradient-top: rgb(255, 0, 153);
+  --bg-gradient-bottom: rgb(73, 50, 64);
+
+  // linear-gradient(to right, rgb(255, 0, 153), rgb(73, 50, 64))
 }
 
 
