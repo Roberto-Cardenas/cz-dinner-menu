@@ -4,14 +4,14 @@
 }
 
 :root {
-  --primary-text-color: #505050;
-  --menu-section-color: rgb(125, 59, 99);
-  --header-section-color: rgb(125, 59, 99);
-  --notable-section-color: rgb(125, 59, 99);
+  --primary-text-color: rgb(255, 255, 255);
+  --menu-section-color: rgb(195, 163, 232);
+  --header-section-color: rgb(195, 163, 232);
+  --notable-section-color: rgb(195, 163, 232);
 
   /* Background gradient colors */
-  --bg-gradient-top: rgb(255, 0, 153);
-  --bg-gradient-bottom: rgb(73, 50, 64);
+  --bg-gradient-top: rgb(187, 125, 88);
+  --bg-gradient-bottom: rgb(50, 29, 3);
 
   // linear-gradient(to right, rgb(255, 0, 153), rgb(73, 50, 64))
 }
@@ -28,6 +28,24 @@ body {
 
   display: grid;
   align-items: center;
+
+  position: relative;
+}
+
+.quote-overlay {
+  position: absolute;
+  inset: 0;
+  color: rgb(122, 89, 50);
+
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-transform: uppercase;
+
+  overflow: hidden;
+
+  .quote-decoration {
+    margin-right: -10rem;
+  }
 }
 
 a {
@@ -46,8 +64,18 @@ a {
   max-width: 60em;
   width: 95%;
   box-sizing: border-box;
+  position: relative;
+  z-index: 1;
 
-  background-color: white;
+  // background-color: white;
+  background: linear-gradient(
+    rgba(90, 62, 122, 0.7), 
+    rgba(90, 62, 122, 0.7)
+  ),
+  url(../images/2012_83_6_001.jpg);;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
   border: 0.75vw solid;
   border-image-source: linear-gradient(125deg, var(--bg-gradient-bottom) 0%, var(--bg-gradient-top) 100%);
   border-image-slice: 1;
@@ -276,6 +304,15 @@ section.notable {
       }
     }
   }
+
+  .quote {
+    margin-top: 4vw;
+    font-size: Min(1rem, 2vw);
+    font-weight: 700;
+    background: linear-gradient(to right, #bf953f, #fcf6ba, #b38728);
+    background-clip: text;
+    color: transparent;
+  }
 }
 
 @media (min-width: 62em) {
@@ -319,6 +356,15 @@ section.notable {
           font-size: 1rem;
         }
       }
+    }
+
+    .quote {
+      margin-top: 4rem;
+      font-size: 1.25rem;
+      font-weight: 700;
+      background: linear-gradient(to right, #bf953f, #fcf6ba, #b38728);
+      background-clip: text;
+      color: transparent;
     }
   }
 }
