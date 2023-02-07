@@ -9,8 +9,8 @@
   --header-section-color: rgb(195, 163, 232);
   --notable-section-color: rgb(195, 163, 232);
   /* Background gradient colors */
-  --bg-gradient-top: rgb(187, 125, 88);
-  --bg-gradient-bottom: rgb(50, 29, 3);
+  --bg-gradient-top: #fcf6ba;
+  --bg-gradient-bottom: #b38728;
 }
 
 body {
@@ -28,14 +28,17 @@ body {
 .quote-overlay {
   position: absolute;
   inset: 0;
-  color: rgb(122, 89, 50);
-  font-size: 1.5rem;
+  font-size: 2rem;
   font-weight: 700;
   text-transform: uppercase;
   overflow: hidden;
 }
 .quote-overlay .quote-decoration {
   margin-right: -10rem;
+  background: linear-gradient(-55deg, #bf953f, #fcf6ba, #b38728);
+  -webkit-background-clip: text;
+          background-clip: text;
+  color: transparent;
 }
 
 a {
