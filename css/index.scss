@@ -10,8 +10,8 @@
   --notable-section-color: rgb(195, 163, 232);
 
   /* Background gradient colors */
-  --bg-gradient-top: #fcf6ba;
-  --bg-gradient-bottom: #b38728;
+  --bg-gradient-top: #254b22;
+  --bg-gradient-bottom: #288a2d;
 }
 
 
@@ -72,10 +72,10 @@ a {
     rgba(90, 62, 122, 0.7), 
     rgba(90, 62, 122, 0.7)
   ),
-  url(../images/2012_83_6_001.jpg);;
+  url(../images/cdmx-protesta-1425584106.jpg);;
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: center;
+  background-position: 20%;
   border: 0.75vw solid;
   border-image-source: linear-gradient(125deg, var(--bg-gradient-bottom) 0%, var(--bg-gradient-top) 100%);
   border-image-slice: 1;
