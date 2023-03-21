@@ -5,12 +5,12 @@
 
 :root {
   --primary-text-color: rgb(255, 255, 255);
-  --menu-section-color: rgb(195, 163, 232);
-  --header-section-color: rgb(195, 163, 232);
-  --notable-section-color: rgb(195, 163, 232);
+  --menu-section-color: rgb(151, 30, 0);
+  --header-section-color: rgb(141, 36, 10);
+  --notable-section-color: rgb(141, 36, 10);
 
   /* Background gradient colors */
-  --bg-gradient-top: #254b22;
+  --bg-gradient-top: #ecf076;
   --bg-gradient-bottom: #288a2d;
 }
 
@@ -69,10 +69,10 @@ a {
 
   // background-color: white;
   background: linear-gradient(
-    rgba(90, 62, 122, 0.7), 
-    rgba(90, 62, 122, 0.7)
+    rgba(255, 172, 151, 0.6), 
+    rgba(255, 172, 151, 0.6)
   ),
-  url(../images/cdmx-protesta-1425584106.jpg);;
+  url(../images/persian-newyear.jpg);;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 20%;
