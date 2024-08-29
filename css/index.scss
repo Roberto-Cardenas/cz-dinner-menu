@@ -4,14 +4,14 @@
 }
 
 :root {
-  --primary-text-color: rgb(255, 255, 255);
+  --primary-text-color: rgb(151, 30, 0);
   --menu-section-color: rgb(151, 30, 0);
   --header-section-color: rgb(141, 36, 10);
   --notable-section-color: rgb(141, 36, 10);
 
   /* Background gradient colors */
-  --bg-gradient-top: #ecf076;
-  --bg-gradient-bottom: #288a2d;
+  --bg-gradient-top: rgb(151, 30, 0);
+  --bg-gradient-bottom: rgb(201, 69, 35);
 }
 
 
@@ -67,15 +67,7 @@ a {
   position: relative;
   z-index: 1;
 
-  // background-color: white;
-  background: linear-gradient(
-    rgba(255, 172, 151, 0.6), 
-    rgba(255, 172, 151, 0.6)
-  ),
-  url(../images/persian-newyear.jpg);;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: 20%;
+  background-color: white;
   border: 0.75vw solid;
   border-image-source: linear-gradient(125deg, var(--bg-gradient-bottom) 0%, var(--bg-gradient-top) 100%);
   border-image-slice: 1;
